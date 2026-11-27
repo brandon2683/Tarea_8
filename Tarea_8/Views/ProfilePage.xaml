@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MiApp.Views.ProfilePage"
+             Title="Mi Perfil">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="16" VerticalOptions="Center">
+
+            <ActivityIndicator x:Name="LoadingIndicator" IsRunning="True" />
+
+            <Label x:Name="ErrorLabel" TextColor="Red" IsVisible="False"
+                   HorizontalTextAlignment="Center" />
+
+            <VerticalStackLayout x:Name="ProfileContainer" Spacing="12"
+                                 IsVisible="False" HorizontalOptions="Center">
+                <Border StrokeShape="RoundRectangle 60" WidthRequest="120"
+                        HeightRequest="120" HorizontalOptions="Center">
+                    <Image x:Name="ProfileImage" Aspect="AspectFill" />
+                </Border>
+
+                <Label x:Name="NameLabel" FontSize="24" FontAttributes="Bold"
+                       HorizontalOptions="Center" />
+
+                <Label x:Name="EmailLabel" FontSize="16" TextColor="Gray"
+                       HorizontalOptions="Center" />
+            </VerticalStackLayout>
+
+            <Button Text="Cerrar sesión" Clicked="OnLogoutClicked"
+                    BackgroundColor="#C62828" TextColor="White" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

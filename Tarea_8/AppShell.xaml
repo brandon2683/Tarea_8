@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:MiApp.Views"
+       x:Class="MiApp.AppShell"
+       FlyoutBehavior="Disabled">
+
+    <ShellContent Route="login"
+                  ContentTemplate="{DataTemplate views:LoginPage}"
+                  Shell.FlyoutItemIsVisible="False" />
+
+    <ShellContent Route="profile"
+                  ContentTemplate="{DataTemplate views:ProfilePage}"
+                  Shell.FlyoutItemIsVisible="False" />
+</Shell>

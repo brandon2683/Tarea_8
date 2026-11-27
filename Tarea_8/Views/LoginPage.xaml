@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MiApp.Views.LoginPage"
+             Title="Iniciar Sesión">
+
+    <VerticalStackLayout Padding="24" Spacing="16"
+                         VerticalOptions="Center">
+
+        <Label Text="Bienvenido" FontSize="28" FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <Entry x:Name="UsernameEntry"
+               Placeholder="Usuario"
+               Keyboard="Text"
+               TextChanged="OnFieldChanged" />
+
+        <Entry x:Name="PasswordEntry"
+               Placeholder="Contraseña"
+               IsPassword="True"
+               TextChanged="OnFieldChanged" />
+
+        <Label x:Name="ErrorLabel"
+               TextColor="Red"
+               IsVisible="False"
+               LineBreakMode="WordWrap" />
+
+        <ActivityIndicator x:Name="LoadingIndicator"
+                           IsRunning="False"
+                           IsVisible="False"
+                           HorizontalOptions="Center" />
+
+        <Button x:Name="LoginButton"
+                Text="Entrar"
+                Clicked="OnLoginClicked" />
+
+        <Label Text="Demo: emilys / emilyspass"
+               FontSize="12" TextColor="Gray"
+               HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>
